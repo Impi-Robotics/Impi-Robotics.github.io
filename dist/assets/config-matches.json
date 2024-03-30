@@ -1,0 +1,172 @@
+{
+  "heading": "Impi Scouting - 2024",
+  "logo": "logo.png",
+  "skipTeamSelection": true,
+  "pages": [
+    {
+      "name": "Setup",
+      "widgets": [
+        {
+          "name": "Match Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "name": "Team Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+
+        {
+          "name": "Scouter Name",
+          "type": "text",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "name": "Starting Position",
+          "type": "dropdown",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "type": "picture",
+          "file": "field.png",
+          "colspan": 2,
+          "height": 250
+        }
+
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "widgets": [
+        {
+          "name": "Passed starting line",
+          "type": "checkbox"
+        },
+        {
+          "type": "spacer",
+          "col": 2
+        },
+        {
+          "name": "Scored first shot",
+          "type": "checkbox"
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Close Notes Scored",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "max": 3
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Far Notes Scored",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "max": 5
+        },
+        {
+          "name": "Notes Diagram",
+          "type": "heading",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "type": "picture",
+          "file": "half.png",
+          "colspan": 2,
+          "height": 250
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "widgets": [
+        {
+          "name": "Scoring",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "Speaker Notes",
+          "type": "spinbox",
+          "col": 2
+        },
+        {
+          "name": "Amp Notes",
+          "type": "spinbox",
+          "col": 2
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5 (Very Effective)"
+          ],
+          "col": 2
+        },
+        {
+          "name": "Mechanical Failure",
+          "type": "checkbox",
+          "col": 2
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "widgets": [
+        {
+          "name": "End Location",
+          "type": "dropdown",
+          "options": [
+            "None",
+            "Parked",
+            "Onstage"
+          ],
+          "default": 3,
+          "col": 1
+        },
+        {
+          "name": "Scored trap note",
+          "type": "checkbox",
+          "col": 1
+
+        },
+        {
+          "name": "Comments",
+          "type": "textarea"
+        }
+      ]
+    }
+  ]
+}
