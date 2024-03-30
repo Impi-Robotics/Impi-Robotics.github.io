@@ -1,10 +1,28 @@
 {
-  "heading": "Crescendo - 2024",
+  "heading": "Impi Scouting - 2024",
   "logo": "logo.png",
+  "skipTeamSelection": true,
   "pages": [
     {
       "name": "Setup",
       "widgets": [
+        {
+          "name": "Match Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "name": "Team Number",
+          "type": "number",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+
         {
           "name": "Scouter Name",
           "type": "text",
@@ -15,60 +33,73 @@
         },
         {
           "name": "Starting Position",
-          "type": "positions",
+          "type": "dropdown",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "type": "picture",
           "file": "field.png",
-          "selectRadius": 10
+          "colspan": 2,
+          "height": 250
         }
+        
       ]
     },
     {
       "name": "Autonomous",
       "widgets": [
         {
-          "name": "Left Starting Zone",
+          "name": "Passed starting line",
           "type": "checkbox"
         },
         {
           "type": "spacer",
-          "height": 20
+          "col": 2
         },
         {
-          "name": "Amp Notes",
+          "name": "Scored first shot",
+          "type": "checkbox"
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Close Notes Scored",
           "type": "spinbox",
           "prefix": "Auto"
         },
         {
-          "name": "Speaker Notes",
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Far Notes Scored",
           "type": "spinbox",
           "prefix": "Auto"
         },
         {
-          "name": "Trap Notes",
-          "type": "spinbox",
-          "max": 3,
-          "prefix": "Auto"
+          "name": "Notes Diagram",
+          "type": "heading",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "type": "picture",
+          "file": "half.png",
+          "colspan": 2,
+          "height": 250
         }
       ]
     },
     {
       "name": "Teleop",
       "widgets": [
-        {
-          "name": "Picked Up From",
-          "type": "heading",
-          "colspan": 5,
-          "align": "center"
-        },
-        {
-          "name": "Ground",
-          "type": "spinbox"
-        },
-        {
-          "name": "Source",
-          "type": "spinbox",
-          "row": 2,
-          "col": 3
-        },
         {
           "name": "Scoring",
           "type": "heading",
@@ -77,28 +108,12 @@
         },
         {
           "name": "Speaker Notes",
-          "type": "spinbox"
-        },
-        {
-          "name": "Amplified Speaker Notes",
           "type": "spinbox",
-          "row": 4,
-          "col": 3
+          "col": 2
         },
         {
           "name": "Amp Notes",
-          "type": "spinbox"
-        },
-        {
-          "name": "Trap Notes",
           "type": "spinbox",
-          "max": 3,
-          "row": 5,
-          "col": 3
-        },
-        {
-          "name": "Co-op Bonus",
-          "type": "checkbox",
           "col": 2
         },
         {
@@ -106,8 +121,22 @@
           "height": 20
         },
         {
-          "name": "Assists",
-          "type": "spinbox"
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5 (Very Effective)"
+          ],
+          "col": 2
+        },
+        {
+          "name": "Mechanical Failure",
+          "type": "checkbox",
+          "col": 2
         }
       ]
     },
@@ -116,58 +145,24 @@
       "widgets": [
         {
           "name": "End Location",
-          "type": "radio",
+          "type": "dropdown",
           "options": [
-            "Onstage and Spotlit",
-            "Onstage",
+            "None",
             "Parked",
-            "None"
+            "Onstage"
           ],
-          "default": 3
+          "default": 3,
+          "col": 1
         },
         {
-          "name": "Failed Climb",
-          "type": "checkbox"
+          "name": "Scored trap note",
+          "type": "checkbox",
+          "col": 1
+
         },
         {
-          "name": "Robot Position",
-          "type": "radio",
-          "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage",
-            "None"
-          ],
-          "default": 3
-        },
-        {
-          "name": "Harmony",
-          "type": "checkbox"
-        },
-        {
-          "name": "Trap Note Positions",
-          "type": "multicheckbox",
-          "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage"
-          ]
-        },
-        {
-          "name": "Mechanical Failures",
-          "type": "text"
-        },
-        {
-          "name": "Stage Positions",
-          "type": "heading",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "type": "picture",
-          "file": "stage.png",
-          "colspan": 2,
-          "height": 250
+          "name": "Comments",
+          "type": "textarea"
         }
       ]
     }
