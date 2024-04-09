@@ -119,6 +119,11 @@
           "col": 2
         },
         {
+          "name": "Notes Fed",
+          "type": "spinbox",
+          "col": 2
+        },
+        {
           "type": "spacer",
           "height": 20
         },
